@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.css">
+    <title>Document</title>
+</head>
+
+
+<body class="container content-wrapper">
+<div class="columns is-multiline">
+     <div class="column"> 
+        <header class="columns has-background-info-dark">
+            <div class="column has-text-centered columns">
+                <div class="column is-8 mt-2">
+                    <h1 class="has-text-white is-size-3">Sistema Integrado de Gestión</h1>
+                </div>
+                <div class="column  mt-2">
+                    <figure class="image is-48x48 is-inline-flex">
+                        <img class="is-rounded" src="imagenes/usuario.jpg">
+                        <figcaption class="pl-2 mt-2 has-text-white">Usuario</figcaption>
+                    </figure>
+                </div>
+            </div>    
+        </header>
+     </div>
+     <div class="column is-full">
+         <div class="columns is-multiline">
+            <aside class="menu column is-8 has-background-grey-dark">
+                <div>
+                    <ul class="menu is-flex">
+                    <li><a class="is-block p-2 mx-5 label has-text-white">Inicio</a></li>
+                    <li><a class="is-block p-2 mx-5 label has-text-white">Usuarios</a></li>
+                    <li><a class="is-block p-2 mx-5 label has-text-white">Clientes</a></li>
+                    <li><a class="is-block p-2 mx-5 label has-text-white">Proveedores</a></li>
+                    <li><a class="is-block p-2 mx-5 label has-text-white">Producto</a></li>
+                    </ul>
+                </div>
+              </aside>
+
+            <nav class="column is-4 has-background-grey-dark">
+                <label class="is-inline-flex">
+                    <label class="label has-text-white is-size-6" for="">Buscar en la Web </label>
+                    <input class="input" type="search" id="" >
+                    <button class="button">
+                        <img class="image is-32x32" src="imagenes/lupa.jpg" id="imagen_buscar">
+                    </button>
+                </label>
+            </nav>
+
+        </div>
+    </div>
+
+        <main class="column is-full">
+            <section class="columns">
+                <div class="column is-2 has-background-warning-dark"></div>
+                <form method="POST" class="column is-8 has-background-white-ter">
+                    <fieldset>
+                        <legend class="label column has-text-centered">Agregar Producto</legend>
+                        <br>
+                            <div class="columns">
+                                <label for="Codigo" class="label column is-3 ml-6">Codigo*</label>
+                                    <input type="text" name="Codigo" id="Codigo" class="input column is-2" pattern="[0-7]{6}" title="Debe ingrsar solo 6 números" required>
+                                    <input class="button is-info" type="button" value="Validar" id="validar">
+                            </div>
+                            
+                            <div class="columns">
+                                <label for="Nombre" class="label column is-3 ml-6">Nombre*</label>
+                                    <input type="text" name="Nombre" id="Nombre" placeholder="Solo letras y numeros" class="input column is-6" pattern="[a-zA-Z\s]{2,100}" required>  
+                            </div>  
+
+                            <div class="columns">
+                                <label for="Abreviatura" class="label column is-3 ml-6">Abreviatura*</label>
+                                    <input type="text" name="Abreviatura" id="Abreviatura" placeholder="Solo letras" maxlength="10" class="input column is-2" pattern="[a-zA-Z\s]{2,50}" title="Solo letras" required>
+                            </div>
+
+                            <div class="columns">
+                                <label for="Categoria" class="label column is-3 ml-6">Categoria*</label>
+                                    <div class="control">
+                                        <div class="select">
+                                          <select>
+                                            <option disabled = "disabled" selected = "selected">--Categorias--</option>
+                                            <option value="Panes especiales">Panes especiales</option>
+                                            <option value="lácteos">lácteos</option>
+                                            <option value="pasteles">pasteles</option>
+                                            <option value="lista cerrada de elementos">lista cerrada de elementos</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                            </div>  
+                            
+                            <div class="columns">
+                                <label for="RUC Proveedor" class="label column is-3 ml-6">RUC Proveedor*</label>
+                                    <input type="tel" name="RUC Proveedor" id="RUC Proveedor" placeholder="Solo numeros" class="input column is-2" required>
+                            </div>
+                                                        
+                            <div class="columns">
+                                <label for="Precio" class="label column is-3 ml-6">Precio*</label>
+                                    <input type="number" name="Precio" id="Precio" class="input column is-2" step="0.01" required>
+                            </div>
+                            
+                            <div class="columns">
+                                <label for="Color_etiqueta" class="label column is-3 ml-6">Color de etiqueta</label>
+                                    <input type="color" name="Color_etiqueta" id="Color_etiqueta" class="input column is-1">
+                            </div>
+
+                            <div class="columns">
+                                <label for="Fecha" class="label column is-3 ml-6">Fecha*</label>
+                                    <input type="date" name="Fecha" id="Fecha" class="input column is-3" required>
+                            </div>
+                            
+                            <div class="columns">
+                                <label for="Estado" class="label column is-3 ml-6">Estado*</label>
+                                    <div class="control">
+                                        <div class="select">
+                                          <select>
+                                            <option disabled = "disabled" selected = "selected">--Estado--</option>
+                                            <option value="Activo">Activo</option>
+                                            <option value="Suspendido">Suspendido</option>
+                                            <option value="De baja">De baja</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="columns">
+                                <label for="Afecto_impuesto" class="label column is-3 ml-6">Afecto a impuesto*</label>
+                                    <input type="checkbox" class="checkbox">
+                            </div>
+
+                            <div class="columns">
+                                <label for="Foto" class="label column is-3 ml-6">Foto</label>
+                                    <input type="file" name="Foto" class="foto" size="5 Mb" accept="image/png, image/jpg">
+                            </div>
+                            
+                            <div class="columns">
+                            <label for="Descripcion" class="label column is-3 ml-6">Descripcion*</label>
+                                <textarea class="column is-7" id="Descripcion" cols="30" rows="10" required></textarea>
+                            </div>
+
+                        <br>
+                        <div class="buttons column has-text-centered">
+                        <input class="button is-success" type="submit" value="Grabar">
+                        <input class="button is-success" type="reset" value="Limpiar">
+                        </div>
+                    </fieldset>
+                    
+                </form>
+                <div class="column is-2 has-background-warning-dark"></div>
+            </section>
+        </main>
+
+    <footer class="column is-full has-background-link-light">
+        <div class="column">
+            <ul class="columns">
+                <li class="column is-4 column has-text-centered"><a href="#">¿Qué hacemos?</a></li>
+                <li class="column is-4 column has-text-centered"><a href="#">Enlaces principales</a></li>
+                <li class="column is-4 column has-text-centered"><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
